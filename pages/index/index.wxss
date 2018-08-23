@@ -1,0 +1,31 @@
+/**index.wxss**/
+page{
+  padding: 200rpx 0;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+  font-size: 28rpx;
+  border: 1px solid #9e9e9e;
+  padding: 15rpx;
+  border-radius: 3px;
+}
+.user-motto{
+  color: #333;
+}

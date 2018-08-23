@@ -1,0 +1,38 @@
+<!--pages/movie-cast/movie-cast.wxml-->
+<view class='container'>
+  <view class='poster-session'>
+    <view class='poster'>
+      <image src='{{avatars.medium}}'></image>
+    </view>
+  </view>
+  <view class='content-session'>
+    <view class='summary'>
+      <view class='info'>
+        <text class='name'>{{name}}</text>
+        <text class='born-place'>出生地：{{born_place}}</text>
+        <text class='birthday'>{{birthday}}</text>
+        <text class='professions'>{{professions}}</text>
+      </view>
+      <view class='fans'>
+        <text class='score'>{{fans}}粉丝</text>
+      </view>
+    </view>
+    <view class='desc'>
+      <text class='title'>简介</text>
+      <text class='desc-content {{isFold ? "desc-3line" : "desc-all"}}'>{{summary}}</text>
+      <text class='unfold' bindtap='toggleFold'>{{isFold ? '展开' : '收起'}}</text>
+    </view>
+    <view class='works'>
+      <text class='title'>代表作品</text>
+      <scroll-view class='avatar-scroll' scroll-x>
+        <view class='avatar-wrapper' wx:for='{{works}}' wx:key='{{works}}'>
+          <image class='avatar' src='{{item.subject.images.small}}'></image>
+          <view class='name-wrapper'>
+            <text class='name'>{{item.subject.title}}</text>
+            <text class='score'> {{item.subject.rating.average}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

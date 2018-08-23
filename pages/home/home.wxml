@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<import src='../movie-grid/movie-grid.wxml'/>
+ <view class='container'>
+  <view class='search-movie' bindtap='bindToSearch'>
+    <icon type='search' size='16' class='search-icon'></icon>
+    <text class='search-placeholder'>搜索电影</text>
+  </view> 
+  <view class='page-session inTheater'>
+    <view class='session-header'>
+      <text class='header-title'>影院热映</text>
+      <text class='header-more' bindtap='bindToMore' data-type-id='inTheaters'>更多></text>
+    </view>
+    <view class='session-content'>
+      <scroll-view class='movie-scroll' scroll-x>
+        <block wx:for='{{inTheaters}}' wx:key="id">
+          <template is='movie-grid' data='{{...item}}'/>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='page-session'>
+    <view class='session-header'>
+      <text class='header-title'>即将上映</text>
+      <text class='header-more' bindtap='bindToMore' data-type-id='comingSoon'>更多></text>
+    </view>
+    <view class='session-content'>
+      <scroll-view class='movie-scroll' scroll-x>
+        <block wx:for='{{comingSoon}}' wx:key="id">
+          <template is='movie-grid' data='{{...item}}'/>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/movieBlock/movieBlock.wxss */
+@import '../movie-rating/movie-rating';
+.movie-wrapper{
+  display: inline-block;
+  margin: 0 10rpx; 
+}
+.movie-wrapper .movie-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-wrapper .movie-content .poster{
+  width: 200rpx;
+  height: 280rpx;
+}
+.movie-wrapper .movie-content .title{
+  width: 200rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #4a4a4a;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-wrapper .movie-content .wish-count{
+  font-size: 24rpx;
+  color: #9e9e9e;
+}

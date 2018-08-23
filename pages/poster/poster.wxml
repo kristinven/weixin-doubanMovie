@@ -1,0 +1,4 @@
+<!--pages/poster/poster.wxml-->
+<view class='container'>
+  <image src='{{posterSrc}}'></image>
+</view>

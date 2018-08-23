@@ -1,0 +1,44 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<view class='container'> 
+  <view class='poster-session'>
+    <view class='poster' bindtap='bindToPoster' data-src='{{images.large}}'>
+      <image src='{{images.medium}}'></image>
+    </view>
+  </view>
+  <view class='content-session'>
+    <view class='summary'>
+      <view class='info'>
+        <text class='name'>{{title}}</text>
+        <text class='genres'>{{allGenres}}</text>
+        <text class='origin-name'>原名: {{original_title}}</text>
+        <text class='country'>国家： {{allCountries}}</text>
+      </view>
+      <view class='rating'>
+        <text class='score'>{{rating.average}}</text>
+        <view class='rating-star allstar{{rating.average+0.5 || 0}}'></view>
+        <text class='wish-count'>{{wish_count}}人</text>
+      </view>
+    </view>
+    <view class='watch-status'>
+      <view class='wish-btn' bindtap='handleWish'>想看</view>
+      <view class='do-btn' bindtap='handleDone'>看过</view>
+    </view>
+    <view class='desc'>
+      <text class='title'>简介</text>
+      <text class='desc-content {{isFold ? "desc-3line" : "desc-all"}}'>{{summary}}</text>
+      <text class='unfold' bindtap='toggleFold'>{{isFold ? '展开' : '收起'}}</text>
+    </view>
+    <view class='dire-casts'>
+      <text class='title'>影人</text>
+      <scroll-view class='avatar-scroll' scroll-x>
+        <view class='avatar-wrapper' wx:for='{{direCasts}}' wx:key='{{direCasts}}' bindtap='bindToCelebrity' data-id='{{item.id}}'>
+          <image class='avatar' src='{{item.avatars.small}}'></image>
+          <view class='name-wrapper'>
+            <text class='name'>{{item.name}}</text>
+            <text class='role'>{{item.type == 'director' ? '导演' : ''}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+/* pages/home/home.wxss */
+@import '../movie-grid/movie-grid.wxss';
+
+.page-session.inTheater {
+  margin-top: 120rpx;
+}
+
+.page-session{
+  width: 100%;
+  margin-top: 30rpx;
+  padding: 30rpx 0;
+  background-color: #fff;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #eee;
+}
+
+.page-session .session-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 30rpx;
+}
+.page-session .session-header .header-title{
+  flex: 1;
+  font-size: 32rpx;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+.page-session .session-header .header-more{
+  font-size: 24rpx;
+  color: #32cd43;
+}
+.page-session .session-content{
+  width: 100%;
+  padding: 0 30rpx;
+  margin-top: 40rpx;
+  box-sizing: border-box; 
+  white-space: nowrap;
+}
+.page-session .session-content .movie-scroll{
+  width: 100%; 
+  white-space: nowrap;
+}
